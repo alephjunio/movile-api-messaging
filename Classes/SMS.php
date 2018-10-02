@@ -50,7 +50,7 @@ class SMS
   /**
   * Função para obter respostas de sms disparados.
   */
-  public function listMo(String $subaccount = null)
+  public function listReceived(String $subaccount = null)
   {
 
     if ($subaccount) {
@@ -89,12 +89,6 @@ class SMS
   */
   public function search($array)
   {
-    $array = [
-     $obj = (object) [
-        'id' => "DF5BE495-C5A4-11E8-9E1E-000C293AFF23",
-      ],
-    ];
-
 
     $contacts_search = [
       'ids' => [],
@@ -190,7 +184,7 @@ class SMS
   * GET https://api-messaging.movile.com/v1/sms/receive/search?end=$params['end']
   *
   */
-  public function searchMo(Array $params = [])
+  public function searchReceived(Array $params = [])
   {
     if ($params['subaccount']) {
       $url = "https://api-messaging.movile.com/v1/sms/receive/search?subAccount={$params['subaccount']}";
@@ -231,7 +225,7 @@ class SMS
   * @param String $phone telefone do contato para disparo
   * @param String $message mensagem para disparo
   */
-  public function send_sms(String $name, String $phone, String $message)
+  public function sendSms(String $name, String $phone, String $message)
   {
     $curl = curl_init('https://api-messaging.movile.com/v1/send-sms');
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, True);
@@ -269,7 +263,7 @@ class SMS
   * @param String $messageDefault mensagem padrão para disparo.
   *
   */
-  public function send_bulk_sms(Array $array, string $message,string $messageDefault = NULL)
+  public function sendBulkSms(Array $array, string $message,string $messageDefault = NULL)
   {
 
     $json = $this->set_send_messages($array, $message, $messageDefault);
@@ -306,7 +300,7 @@ class SMS
   * @param String $message mensagem para disparo
   * @param String $messageDefault mensagem padrão para disparo
   */
-  public function set_send_messages(Array $array, string $message,string $messageDefault = NULL)
+  public function setSendMessages(Array $array, string $message,string $messageDefault = NULL)
   {
 
     $contacts_send_bulk = [

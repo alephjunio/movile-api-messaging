@@ -48,27 +48,27 @@ $contacts_search = [
 * Instaciando a classe para utililização da classe de disparos.
 * Passando username e o token de acesso a api movile.com
 */
-$sms = new SMS('CJU Sistemas','oXuGub7D5ZdyxhTtE6DHVszwRp4e8ArhQxLEDagW');
-// Diparando sms unico.
-// echo $sms->send_sms($contact['name'],$contact['phone'],$contact['message']);
-
-// Disparando sms em massa.
-// echo $sms->send_bulk_sms($contacts,'mensagem','mesagem default');
-
-// listar status de todos os disparos sms.
+// $sms = new SMS('username','token');
+// // Diparando sms unico.
+// echo $sms->sendSms($contact['name'],$contact['phone'],$contact['message']);
+//
+// // Disparando sms em massa.
+// echo $sms->sendBulkSms($contacts,'mensagem','mesagem default');
+//
+// // listar status de todos os disparos sms.
 // echo $sms->Statuslist();
-
-// buscar e listar todos os disparos sms.
+//
+// // buscar e listar todos os disparos sms.
 // echo $sms->search($contacts_search);
-
-// buscar e listarMO todos os disparos sms.
-// echo $sms->listMo();
-
-// buscar e searchMO todos os disparos sms.
+//
+// // buscar e listarReceived todos os disparos sms.
+// echo $sms->listReceived();
+//
+// // buscar e searchReceived todos os disparos sms.
 // $array = [
 //   'start' => '2016-09-12T00:00:00',
 //   'end' => '2016-09-12T00:00:00',
 //   'subaccont' => '2016-09-12T00:00:00',
 // ];
 //
-// echo $sms->searchMo($array);
+// echo $sms->searchReceived($array);
