@@ -45,7 +45,7 @@ $contacts_search = [
 ];
 
 /*
-* Instaciando a classe para utililização da classe de disparos.
+* Instanciando a classe para utililização da classe de disparos.
 * Passando username e o token de acesso a api movile.com
 */
 // $sms = new SMS('username','token');
